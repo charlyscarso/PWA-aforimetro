@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firefly - Aforador</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#f9d627" />
+  <script src="./node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container pl-3" id="field-select">
+    <div class="d-flex">
+            <div class="center">
+                <img src="images/Banner.png"
+                        class="card-img-top img-fluid mt-3" 
+                        style="width: 20rem;"
+                        alt="logo">
+            </div>
+            <div class="card mt-1" style="border:none;" id="field-select-body">
+              <div class="card-body" style="margin-left: auto; margin-right: auto;">
+                <h5 class="center1" style="color:#9d9d9c;">Aforador</h5>
+                <div class="frame">
+                  <div class="fila_1">
+                      <label for="select" style="color: #3ba579;margin-bottom: 10px; font-weight: bold; margin-left: 5px;">Tipo</label>
+                      <select class="form-control" id="tipos"
+                          style="border-top: none !important; border-right: none; border-left: none;width: 160px;margin: 12px; text-align: center;">
+                          <option disabled selected value> select an option </option>
+                          <option value="circular">Circular</option>
+                      </select>
+                  </div>
+                  <div class="fila_1">
+                      <label for="select" style="color: #3ba579; margin-top: 10px; margin-bottom: 10px; font-weight: bold;; margin-left: 5px;">Medidas (pulgadas)</label>
+                      <select class="form-control" id="medidas"
+                          style="border-top: none !important; border-right: none; border-left: none;width: 160px;margin-left: 2%;margin: 12px;text-align: center;">
+                          <option disabled selected value> select an option </option>
+                          <option value="6,2">6x2</option>
+                          <option value="12, 4">12x4</option>
+                          <option value="16, 8">16x8</option>
+                          <option value="32, 12">32x12</option>
+                      </select>
+                  </div>
+                </div>
+                  <div class="row mt-3">
+                    <div class="inner">
+                          <span style="column-width: 100px;" id="datetime"></span>
+                          <span style="column-width: 100px;" id="caudal"></span>
+                    </div> 
+                  </div>
+                  <canvas id="myChart" width="400" height="200"></canvas>
+                  <h5 class="center" style="color:#9d9d9c;" id="caudalErogado">Caudal Total:</h5> 
+                  <h5 class="center" style="color:#9d9d9c;" id="tiempoTotal">Tiempo Total:</h5> 
+                  <div class="center2">
+                    <div class="inner">
+                      <button onclick="startMeasurement()" class="buttonEmpezar">Empezar<br>Medición</button>
+                      <button onclick="stopMeasurement()" class="button">Parar<br>Medición</button>
+                      <button id="downloadLink" href="#" download="datos.csv" class="button1">Descargar<br>CSV</button>
+                
+                    </div> 
+                  </div>
+      </div>
+    </div>
+    
+
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
