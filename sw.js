@@ -8,7 +8,9 @@ const APP_SHELL = [
   "js/Chart.bundle.min.js",
   
   "images/logoFirefly400x400.png",
-  "images/Banner.png"
+  "images/Banner.png",
+  "images/192x192.png",
+  "images/384x384.png"
 ];
 
 self.addEventListener("install", (e) => {
