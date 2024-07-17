@@ -3,7 +3,7 @@ let swLocation = "sw.js";
 
 //Configurar SW
 if (navigator.serviceWorker) {
-  if (window.location.href.includes("localhost")) swLocation = "/sw.js"; //Varia según el host
+  if (window.location.href.includes("pwa-aforimetro.vercel.app")) swLocation = "/sw.js"; //Varia según el host
   navigator.serviceWorker.register(swLocation);
 }
 
