@@ -2,25 +2,10 @@
 let swLocation = "sw.js";
 
 //Configurar SW
-// if (navigator.serviceWorker) {
-//   if (window.location.href.includes("localhost")) swLocation = "/sw.js"; //Varia según el host
-//   navigator.serviceWorker.register(swLocation);
-// }
-
-// Register the service worker
-if ('serviceWorker' in navigator) {
-  // Wait for the 'load' event to not block other work
-  window.addEventListener('load', async () => {
-    // Try to register the service worker.
-    try {
-      const reg = await navigator.serviceWorker.register(swLocation);
-      console.log('Service worker registered! 😎', reg);
-    } catch (err) {
-      console.log('😥 Service worker registration failed: ', err);
-    }
-  });
+if (navigator.serviceWorker) {
+  if (window.location.href.includes("https://pwa-aforimetro.vercel.app/")) swLocation = "/sw.js"; //Varia según el host
+  navigator.serviceWorker.register(swLocation);
 }
-
 
 
 const serverAddress = 'http://192.168.4.1'; // Dirección IP del Arduino
