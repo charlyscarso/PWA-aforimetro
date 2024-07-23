@@ -4,7 +4,7 @@ const cacheName = 'cache-v1';
 
 // const APP_SHELL = [
 //   "/",
-//   "pagina_caudalimetro.html",
+//   "index.html",
 //   "css/styles.css",
 //   "js/main.js",
 //   "js/Chart.bundle.min.js",
@@ -14,7 +14,7 @@ const cacheName = 'cache-v1';
 // ];
 const precacheResources  = [
   "/",
-  "pagina_caudalimetro.html",
+  "index.html",
   "css/styles.css",
   "js/main.js",
   "js/Chart.bundle.min.js",

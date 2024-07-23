@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open chart-example.html",
-            "file": "c:\\Users\\charl\\OneDrive\\Documentos\\Arduino\\chart-example-Prueba\\chart-example.html"
+            "file": "C:\\Users\\charl\\OneDrive\\Documentos\\Arduino\\pagina_caudal_offline - masabotones\\pagina_caudalimetro.html"
         }
     ]
 }
